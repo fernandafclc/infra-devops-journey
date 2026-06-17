@@ -129,7 +129,9 @@ ip -br a
 ping -c 4 <IP_HOSTONLY_DO_SERVER>
 # Conexão via ssh
 ssh <usuario>@<IP_HOSTONLY_DO_SERVER>
+```
 
+```bash
 # Na vm-srv01
 # Ping servidor -> cliente
 ping -c 4 <IP_HOSTONLY_DO_CLIENTE>
