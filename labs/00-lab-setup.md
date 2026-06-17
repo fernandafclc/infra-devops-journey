@@ -65,7 +65,7 @@ Configurações VirtualBox
 - Marcação “reinitialize MAC address / gerar novos MACs” para evitar conflito de hardware.
 - Adequação de recursos de CPu e RAM.
 - Full clone para evitar dependências de disco.
-- Rede  
+- Rede 
    - NAT(DHCP)
    - Host-Only (IP fixo)
 	- Subnet 192.168.56.0/24
@@ -117,6 +117,7 @@ network:
 sudo netplan try
 # Aplicação definitiva
 sudo netplan apply
+```
 
 ## Testes de conectividade de rede
 
