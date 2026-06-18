@@ -8,3 +8,4 @@ Este repositório documenta minha jornada de aprendizado focada em Infraestrutur
 - [notes/](notes/) — Anotações de estudo, resumos, dicas e comandos úteis
 - [scripts/](scripts/) — Scripts úteis para automações e rotinas
 - [project-01/](project-01/) — Primeiro projeto prático completo (ex: servidor Linux administrado por SSH)
+- [runbooks/](runbooks/) - Manuais de procedimentos repetitivos
