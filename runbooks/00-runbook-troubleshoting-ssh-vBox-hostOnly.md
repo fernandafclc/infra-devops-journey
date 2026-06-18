@@ -2,7 +2,7 @@
 ## 1. Cenário/Situação Inicial
 # Ambiente de laboratório usando VirtualBox com rede Host-Only (vboxnet0).
 Infra:
-- Notebook (host): Ubuntu 24.04
+- PC (host): Ubuntu 24.04
 - VMs: server e client, ambos na rede 192.168.56.0/24.
 Sintoma:
 - Cliente SSH dentro de VM conecta normalmente ao server.
