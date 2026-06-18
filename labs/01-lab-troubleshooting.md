@@ -47,9 +47,9 @@ ip neigh flush all
 ip neigh flush dev vboxnet0
 ```
 
-##(6) Ação corretiva final que resolveu
-#Reendereçamento VMs para .11 (server) e .12 (cliente)
-#Resetar vboxnet0 no PC:
+## (6) Ação corretiva final que resolveu
+# Reendereçamento VMs para .11 (server) e .12 (cliente)
+# Resetar vboxnet0 no PC:
 
 ```bash
 #Por que funcionou:
@@ -59,8 +59,8 @@ sudo ip addr flush dev vboxnet0
 sudo ip addr add 192.168.56.1/24 dev vboxnet0
 ```
 
-##Evidências
-#Evidência do erro (SSH)
+## Evidências
+# Evidência do erro (SSH)
 Trecho relevante:
 
 ```bash
@@ -72,8 +72,8 @@ connect to address 192.168.56.2 port 22: Connection refused
 link/ether 08:00:27:49:d5:c6 brd ff:ff:ff:ff:ff:ff
 inet 192.168.56.2/24 brd 192.168.56.255 scope global enp0s8 # ip a comandado na VM server
 ```
-# MAC do ARP no PC atrelado a um IP deveria ser igual ao MAC real da interface da VM nesse IP.
-# Quando não coincide → forte indício de IP em conflito ou mapeamento/host-only errado.
-# Evidência final
-# Após a reconfiguração funciona a conexão via ssh
+> MAC do ARP no PC atrelado a um IP deveria ser igual ao MAC real da interface da VM nesse IP.
+> Quando não coincide → forte indício de IP em conflito ou mapeamento/host-only errado.
+> Evidência final
+> Após a reconfiguração funciona a conexão via ssh
 
