@@ -17,8 +17,8 @@ nc -vz 192.168.56.2 22
 
 ## (3) Verificação de interface host-only no notebook
 No PC:
-```
-bash
+
+```bash
 # Confirma que o vboxnet0 existe e está na mesma sub-rede (192.168.56.1/24)
 ip a | grep -E '192\.168\.56\.|vboxnet|VirtualBox' -n
 ```
@@ -36,6 +36,7 @@ cat /sys/class/net/enp0s8/address
 # ou
 ip -br link show enp0s8
 ```
+
 ## (5) Flush da tabela ARP (limpar cache)
 No PC:
 
@@ -44,6 +45,7 @@ No PC:
 ip neigh flush all
 # ou específico:
 ip neigh flush dev vboxnet0
+```
 
 ##(6) Ação corretiva final que resolveu
 #Reendereçamento VMs para .11 (server) e .12 (cliente)
@@ -69,7 +71,7 @@ connect to address 192.168.56.2 port 22: Connection refused
 # MAC address do host (server) configurado com o IP 192.168.56.2
 link/ether 08:00:27:49:d5:c6 brd ff:ff:ff:ff:ff:ff
 inet 192.168.56.2/24 brd 192.168.56.255 scope global enp0s8 # ip a comandado na VM server
-
+```
 # MAC do ARP no PC atrelado a um IP deveria ser igual ao MAC real da interface da VM nesse IP.
 # Quando não coincide → forte indício de IP em conflito ou mapeamento/host-only errado.
 # Evidência final
